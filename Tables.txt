@@ -1,0 +1,102 @@
++----------------+
+| Tables_in_mydb |
++----------------+
+| artist         |
+| bought_by      |
+| customer       |
+| exhibition     |
+| gallery        |
+| login          |
+| organise       |
+| painting       |
++----------------+
+
+mysql> desc artist;
++---------+---------------+------+-----+---------+-------+
+| Field   | Type          | Null | Key | Default | Extra |
++---------+---------------+------+-----+---------+-------+
+| a_id    | int           | NO   | PRI | NULL    |       |
+| email   | varchar(30)   | YES  |     | NULL    |       |
+| a_name  | varchar(20)   | YES  |     | NULL    |       |
+| state   | varchar(15)   | YES  |     | NULL    |       |
+| city    | varchar(15)   | YES  |     | NULL    |       |
+| pincode | int           | YES  |     | NULL    |       |
+| phone   | decimal(10,0) | YES  |     | NULL    |       |
+| g_id    | varchar(5)    | YES  |     | NULL    |       |
++---------+---------------+------+-----+---------+-------+
+8 rows in set (0.01 sec)
+
+mysql> desc bought_by;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| c_id  | int         | YES  | MUL | NULL    |       |
+| url   | varchar(50) | YES  | MUL | NULL    |       |
+| cost  | int         | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql> desc customer;
++---------+---------------+------+-----+---------+-------+
+| Field   | Type          | Null | Key | Default | Extra |
++---------+---------------+------+-----+---------+-------+
+| c_id    | int           | NO   | PRI | NULL    |       |
+| c_name  | varchar(20)   | YES  |     | NULL    |       |
+| address | varchar(50)   | YES  |     | NULL    |       |
+| phone   | decimal(10,0) | YES  |     | NULL    |       |
++---------+---------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> desc exhibition;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| e_id       | int         | NO   | PRI | NULL    |       |
+| e_name     | varchar(10) | YES  |     | NULL    |       |
+| e_type     | int         | YES  |     | NULL    |       |
+| start_date | date        | YES  |     | NULL    |       |
+| end_date   | date        | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> desc gallery;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| g_id     | int         | NO   | PRI | NULL    |       |
+| g_name   | varchar(20) | YES  |     | NULL    |       |
+| landmark | varchar(15) | YES  |     | NULL    |       |
+| city     | varchar(10) | YES  |     | NULL    |       |
+| url      | varchar(50) | YES  | MUL | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> desc login;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| email    | varchar(50) | NO   | PRI | NULL    |       |
+| usertype | int         | YES  |     | NULL    |       |
+| pwd      | varchar(10) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc organise;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| g_id  | int  | YES  | MUL | NULL    |       |
+| e_id  | int  | YES  | MUL | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc painting;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| title | varchar(20) | NO   | PRI | NULL    |       |
+| year  | year        | YES  |     | NULL    |       |
+| url   | varchar(50) | NO   | PRI | NULL    |       |
+| type  | varchar(10) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
