@@ -30,10 +30,10 @@
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="frontpage.jsp">Home</a>
+          <a href="Home.jsp">Home</a>
         </li>
         <li>
-          <a href="visitorsignup.jsp">SignUp/Login</a>
+          <a href="Register.jsp">SignUp/Login</a>
         </li>
         <li>
           <a href="About_us.jsp">About Us</a>

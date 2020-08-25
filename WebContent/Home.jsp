@@ -28,7 +28,7 @@ pageEncoding="UTF-8"%>
 <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
   <ul class="nav navbar-nav navbar-right">
   <li>
-      <a href="frontpage.jsp">Home</a>
+      <a href="Home.jsp">Home</a>
     </li>
     <li>
       <a href="Register.jsp">SignUp/Login</a>
@@ -41,6 +41,9 @@ pageEncoding="UTF-8"%>
 </nav>
 </div>
 </header>
+<%session.removeAttribute("l_id");
+	session.invalidate();
+%>
 
 <style>
 .carousel-item {

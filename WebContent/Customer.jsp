@@ -52,6 +52,10 @@
 
 </head>
 <body>
+	<% response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+		if(session.getAttribute("l_id")==null) 
+			response.sendRedirect("Home.jsp");
+		%>
 
 	<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
         <div class="container">
@@ -68,7 +72,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a href="Customer.jsp">Home</a></li>
               <li><a href="purchases.jsp">Purchases</a></li>
-              <li><a href="Homepage.jsp">Logout</a></li>
+              <li><a href="Home.jsp">Logout</a></li>
               <li><a href="#"> <%
               	String id=(String)session.getAttribute("l_id");  
         		out.println("Welcome "+id);

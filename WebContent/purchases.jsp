@@ -42,6 +42,10 @@
 
 </head>
 <body>
+<% response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+		if(session.getAttribute("l_id")==null) 
+			response.sendRedirect("Home.jsp");
+		%>
 	<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
         <div class="container">
           <div class="navbar-header">

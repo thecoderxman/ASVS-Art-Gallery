@@ -24,9 +24,9 @@
           </div>
           <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="likes.jsp">Home</a></li>
+              <li><a href="Customer.jsp">Home</a></li>
               <li><a href="purchases.jsp">Purchases</a></li>
-              <li><a href="frontpage.jsp">Logout</a></li>
+              <li><a href="Home.jsp">Logout</a></li>
               <li><a href="#"> <%
               	String id=(String)session.getAttribute("l_id");  
         		out.println("Welcome "+id);
