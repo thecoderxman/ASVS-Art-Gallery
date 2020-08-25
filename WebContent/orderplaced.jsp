@@ -42,7 +42,7 @@
 <br>
 <br>
 <center><h1>ORDER PLACED SUCCESSFULLY</h1></center>
-<center><h1>THANK YOU FOR SHOPPING AT AVSV ART GALLERY</h1></center>
+<center><h1>THANK YOU FOR SHOPPING AT ASVS ART GALLERY</h1></center>
 </body>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script>

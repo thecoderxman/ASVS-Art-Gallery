@@ -31,6 +31,8 @@ public class SignUpServlet extends HttpServlet {
         String dbName="mydb";
         String driver="com.mysql.jdbc.Driver";
         String level = request.getParameter("member_level");
+        
+        
 
     try{ 
     	if ("customer".equals(level)) {
@@ -38,6 +40,9 @@ public class SignUpServlet extends HttpServlet {
       String pwd = request.getParameter("password1");  
       String name = request.getParameter("name");
     
+      HttpSession session = request.getSession(false);
+        if(session!=null)
+        session.setAttribute("l_id", email);
       Class.forName(driver).newInstance();  
       conn = DriverManager.getConnection(url+dbName,"root", "12345678"); 
       PreparedStatement pst1 =(PreparedStatement) conn.prepareStatement("insert into login values(?,2,?)");//try2 is the name of the table  
@@ -70,6 +75,9 @@ public class SignUpServlet extends HttpServlet {
 //			String pno = request.getParameter("mobileno");
 			String email = request.getParameter("email");
 			String pwd = request.getParameter("password1");
+			HttpSession session = request.getSession(false);
+	        if(session!=null)
+	        session.setAttribute("l_id", email);
 
 			PreparedStatement pst = (PreparedStatement) conn.prepareStatement("insert into artist values(?,?,?)");
 			pst.setString(1, email);

@@ -13,7 +13,7 @@
 
 </head>
 <body>
-<% response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+	<% response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
 		if(session.getAttribute("l_id")==null) 
 			response.sendRedirect("Home.jsp");
 		%>

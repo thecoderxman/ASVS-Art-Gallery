@@ -21,23 +21,13 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>SignupServlet</display-name>
-    <servlet-name>SignupServlet</servlet-name>
-    <servlet-class>Art_Gallery.SignupServlet</servlet-class>
+    <display-name>SignUpServlet</display-name>
+    <servlet-name>SignUpServlet</servlet-name>
+    <servlet-class>Art_Gallery.SignUpServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>SignupServlet</servlet-name>
-    <url-pattern>/SignupServlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>Signupservlet1</display-name>
-    <servlet-name>Signupservlet1</servlet-name>
-    <servlet-class>Art_Gallery.Signupservlet1</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Signupservlet1</servlet-name>
-    <url-pattern>/Signupservlet1</url-pattern>
+    <servlet-name>SignUpServlet</servlet-name>
+    <url-pattern>/SignUpServlet</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>

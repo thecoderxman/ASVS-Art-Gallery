@@ -95,7 +95,7 @@ String driver = "com.mysql.jdbc.Driver";
 String userName = "root";
 String password = "12345678";
 HttpSession httpSession = request.getSession();
-String c_email = httpSession.getAttribute("login1").toString();
+String c_email = httpSession.getAttribute("l_id").toString();
 //System.out.println(id);
 //String query2 = "insert into likes (v_id, title) values(?, ?)";
 try {
